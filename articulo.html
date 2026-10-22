@@ -303,7 +303,7 @@ const POSTS = [
   ['Pastelería francesa: qué pedir la primera vez', 'Obrador', 'assets/blog-3.png'],
   ['Pan sin gluten: qué días hay', 'Obrador', 'assets/local.jpg'],
   ['Temporada alta: cómo cambia el pueblo', 'San Pedro', 'assets/terraza-tarde.jpg']
-].map(([title, cat, img, ex]) => ({ title, cat, img, bgImg: img ? 'url(' + img + ')' : "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><path d='M0 0L100 100M100 0L0 100' stroke='%231E1A15' stroke-opacity='.18' stroke-width='.4' vector-effect='non-scaling-stroke' fill='none'/></svg>\"), linear-gradient(#E6DDCC,#E6DDCC)", ex: ex || 'Una o dos líneas con la respuesta concreta que busca quien llega desde Google.', href: 'blog-articulo.html' }));
+].map(([title, cat, img, ex]) => ({ title, cat, img, bgImg: img ? 'url(' + img + ')' : "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><path d='M0 0L100 100M100 0L0 100' stroke='%231E1A15' stroke-opacity='.18' stroke-width='.4' vector-effect='non-scaling-stroke' fill='none'/></svg>\"), linear-gradient(#E6DDCC,#E6DDCC)", ex: ex || 'Una o dos líneas con la respuesta concreta que busca quien llega desde Google.', href: 'articulo.html' }));
 class Component extends DCLogic {
   state = { now: Date.now(), progress: '0%' };
   componentDidMount() {
