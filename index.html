@@ -68,7 +68,7 @@ html.lenis,html.lenis body{height:auto}
       <a href="#marca" style-hover="color:#6E5B3E">La marca</a>
       <a href="#ubicacion" style-hover="color:#6E5B3E">Ubicación</a>
       <a href="#contacto" style-hover="color:#6E5B3E">Contacto</a>
-      <a href="blog.html" style-hover="color:#6E5B3E">Blog</a>
+      <a href="Blog.dc.html" style-hover="color:#6E5B3E">Blog</a>
     </nav>
     
     <div data-fr-lang="" style="position:relative">
@@ -101,7 +101,7 @@ html.lenis,html.lenis body{height:auto}
         <a href="#marca" onClick="{{ menuGo }}" style="transition:opacity .5s ease 175ms,transform .6s cubic-bezier(.2,.7,.2,1) 175ms;opacity:{{ menuItemOp }};transform:{{ menuItemX }};display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(30,26,21,.1);color:#1E1A15"><span style="font-size:13px;color:rgba(30,26,21,.45);width:22px">02</span><span style="font-size:clamp(34px,9vw,48px);font-weight:500;letter-spacing:-.03em;line-height:1">La marca</span></a>
         <a href="#ubicacion" onClick="{{ menuGo }}" style="transition:opacity .5s ease 230ms,transform .6s cubic-bezier(.2,.7,.2,1) 230ms;opacity:{{ menuItemOp }};transform:{{ menuItemX }};display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(30,26,21,.1);color:#1E1A15"><span style="font-size:13px;color:rgba(30,26,21,.45);width:22px">03</span><span style="font-size:clamp(34px,9vw,48px);font-weight:500;letter-spacing:-.03em;line-height:1">Ubicación</span></a>
         <a href="#contacto" onClick="{{ menuGo }}" style="transition:opacity .5s ease 285ms,transform .6s cubic-bezier(.2,.7,.2,1) 285ms;opacity:{{ menuItemOp }};transform:{{ menuItemX }};display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(30,26,21,.1);color:#1E1A15"><span style="font-size:13px;color:rgba(30,26,21,.45);width:22px">04</span><span style="font-size:clamp(34px,9vw,48px);font-weight:500;letter-spacing:-.03em;line-height:1">Contacto</span></a>
-        <a href="blog.html" onClick="{{ menuGo }}" style="transition:opacity .5s ease 340ms,transform .6s cubic-bezier(.2,.7,.2,1) 340ms;opacity:{{ menuItemOp }};transform:{{ menuItemX }};display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(30,26,21,.1);color:#1E1A15"><span style="font-size:13px;color:rgba(30,26,21,.45);width:22px">05</span><span style="font-size:clamp(34px,9vw,48px);font-weight:500;letter-spacing:-.03em;line-height:1">Blog</span></a>
+        <a href="Blog.dc.html" onClick="{{ menuGo }}" style="transition:opacity .5s ease 340ms,transform .6s cubic-bezier(.2,.7,.2,1) 340ms;opacity:{{ menuItemOp }};transform:{{ menuItemX }};display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(30,26,21,.1);color:#1E1A15"><span style="font-size:13px;color:rgba(30,26,21,.45);width:22px">05</span><span style="font-size:clamp(34px,9vw,48px);font-weight:500;letter-spacing:-.03em;line-height:1">Blog</span></a>
       </nav>
       <div style="display:flex;flex-direction:column;gap:12px">
         <p style="margin:0;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(30,26,21,.55)">Idioma</p>
@@ -194,7 +194,7 @@ html.lenis,html.lenis body{height:auto}
         <div ref="{{ carRef }}" onScroll="{{ carScroll }}" data-car="" style="display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;border-radius:clamp(24px,3vw,44px)">
           <sc-for list="{{ slides }}" as="sl" hint-placeholder-count="3">
             <div style="flex:0 0 min(78%,980px);height:clamp(320px,min(44vw,66vh),620px);scroll-snap-align:start;border-radius:clamp(24px,3vw,44px);overflow:hidden;background:#E3DACA">
-              <div role="img" aria-label="{{ sl.alt }}" style="width:100%;height:100%;background-size:cover;background-position:center;background-image:{{ sl.bg }}"></div>
+              <div role="img" aria-label="{{ sl.alt }}" style="width:100%;height:100%;background-size:cover;background-position:{{ sl.pos }};background-image:{{ sl.bg }}"></div>
             </div>
           </sc-for>
         </div>
@@ -232,7 +232,7 @@ html.lenis,html.lenis body{height:auto}
           <p style="margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(30,26,21,.55)">Categorías</p>
           <div style="display:flex;flex-direction:column;gap:2px">
             <sc-for list="{{ menu }}" as="cat" hint-placeholder-count="11">
-              <a href="{{ cat.href }}" onClick="{{ cat.go }}" style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-radius:12px;font-size:15px;background:{{ cat.bg }};color:{{ cat.fg }}" style-hover="background:rgba(30,26,21,.06)">
+              <a href="{{ cat.href }}" onClick="{{ cat.go }}" style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-radius:12px;font-size:15px;background:{{ cat.bg }};color:{{ cat.fg }}" style-hover="box-shadow:inset 0 0 0 999px rgba(30,26,21,.06)">
                 <span>{{ cat.name }}</span><span style="font-size:12px;opacity:.6">{{ cat.count }}</span>
               </a>
             </sc-for>
@@ -386,11 +386,11 @@ html.lenis,html.lenis body{height:auto}
           <p style="display:flex;align-items:center;gap:10px;margin:0 0 24px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase"><span style="width:7px;height:7px;border-radius:50%;background:#A18B69"></span>Blog</p>
           <h2 style="margin:0;font-weight:500;font-size:clamp(36px,min(4.4vw,8vh),64px);line-height:1.02;letter-spacing:-.03em">Del <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:1.16em;line-height:.9">obrador</span> y del pueblo</h2>
         </div>
-        <a href="blog.html" style="display:inline-flex;align-items:center;gap:12px;padding:16px 28px;border-radius:999px;border:1px solid rgba(30,26,21,.22);font-weight:600;font-size:16px" style-hover="background:rgba(30,26,21,.06)">Ver todas las entradas del blog <span>→</span></a>
+        <a href="Blog.dc.html" style="display:inline-flex;align-items:center;gap:12px;padding:16px 28px;border-radius:999px;border:1px solid rgba(30,26,21,.22);font-weight:600;font-size:16px" style-hover="background:rgba(30,26,21,.06)">Ver todas las entradas del blog <span>→</span></a>
       </div>
       <div style="display:flex;flex-direction:column;gap:32px">
         <sc-for list="{{ posts }}" as="post" hint-placeholder-count="1">
-          <a href="articulo.html" style="display:flex;flex-wrap:wrap;gap:28px 56px;align-items:center;color:#1E1A15">
+          <a href="Blog%20Articulo.dc.html" style="display:flex;flex-wrap:wrap;gap:28px 56px;align-items:center;color:#1E1A15">
             <div style="flex:1 1 520px;min-width:0;aspect-ratio:16/9;border-radius:32px;overflow:hidden;background:#E3DACA"><div role="img" aria-label="{{ post.title }}" style="width:100%;height:100%;background-size:cover;background-position:center;background-image:{{ post.bgImg }};transition:transform .9s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.04)"></div></div>
             <div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:18px">
               <p style="margin:0;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(30,26,21,.55)">{{ post.meta }}</p>
@@ -468,8 +468,11 @@ const PHOTOS = {
   croissants: { 'Natural':'croissant-natural','Pain au chocolat':'pain-au-chocolat','Manjar':'croissant-manjar','Frambuesa y chocolate blanco':'croissant-frambuesa','Torsado':'torsado','Rollito de canela':'rollo-canela','Jamón & queso':'croissant-jamon-queso','Jamón serrano & parmesano':'croissant-serrano','Salmón, queso crema & alcaparras':'croissant-salmon' },
   empanadas: { 'Empanada de queso':'empanada-queso','Empanada de pino':'empanada-pino' },
   quiches: { 'Tocino «Lorraine»':'quiche-tocino','Cebolla':'quiche-cebolla','Salmón & espinacas':'quiche-salmon','Tomate & mostaza Dijon':'quiche-tomate','Champiñón':'quiche-champinon','4 quesos':'quiche-4-quesos','Mechada & queso':'quiche-mechada' },
-  bebidas: { 'Jugo natural':'jugo-natural' },
-  pizzas: { 'La Belle Pera':'pizza-pera','La Causeo Nortino':'pizza-causeo','La Toscana':'pizza-toscana','La Pepperoni':'pizza-pepperoni' },
+  bebidas: { 'Jugo natural':'jugo-natural','Agua purificada':'agua-purificada','Granizado':'granizado-maracuya' },
+  agregados: { 'Mantequilla de campo':'agregado-mantequilla','Palta':'agregado-palta','Queso mantecoso':'agregado-mantecoso','Queso cabra':'agregado-cabra','Mermelada':'agregado-mermelada','Paté de campo artesanal':'agregado-pate' },
+  mocktails: { 'Mule ahumado':'mocktail-mule-ahumado','Mule especiado':'mocktail-mule-especiado','Tropical Ginger':'mocktail-tropical-ginger','Naranja Coffee Tonic':'mocktail-coffee-tonic','Mango michelado':'mocktail-mango-michelado','Not Mojito':'mocktail-mojito','Not Bloody Mary':'mocktail-bloody-mary' },
+  novedades: { 'Trozo torta Opera':'novedad-opera','Brioche pastelera':'novedad-brioche-pastelera','Brioche manjar':'novedad-brioches','Brioche avellana chocolate':'novedad-brioches' },
+  pizzas: { 'La Margarita':'pizza-margarita','La Potager':'pizza-potager','La Belle Pera':'pizza-pera','La Causeo Nortino':'pizza-causeo','La Toscana':'pizza-toscana','La Pepperoni':'pizza-pepperoni' },
   eclairs: { 'Avellanas':'eclair-avellana','Café':'eclair-cafe','Frambuesa':'eclair-frambuesa','Tiramisú':'eclair-tiramisu','Maracuyá':'eclair-maracuya','Limón rica-rica':'eclair-limon','Chocolate':'eclair-chocolate','Pistachos':'eclair-pistacho' }
 };
 const photoFor = (cat, n) => { const p = PHOTOS[cat] && PHOTOS[cat][n]; return p ? 'assets/carta/' + p + '.jpg' : ''; };
@@ -492,7 +495,7 @@ const SLIDES = [
   ['assets/blog-3.png', 'Terraza de La Franchutería bajo los chañares'],
   ['assets/blog-1.png', 'Croissants, quiches y baguette sobre tablas de madera'],
   ['assets/arthur-1.png', 'Arthur Becker con un brazo lleno de baguettes'],
-  ['assets/blog-2.png', 'Pan de aceitunas partido frente al atardecer en el desierto']
+  ['assets/blog-2.png', 'Pan de aceitunas partido frente al atardecer en el desierto', 'center 85%']
 ];
 const POSTS = [
   ['Dónde desayunar en San Pedro de Atacama','blog-1'],
@@ -694,6 +697,7 @@ class Component extends DCLogic {
       id: 'cat-' + id, href: '#cat-' + id, name, count: items.length,
       bg: active === id ? '#1E1A15' : 'transparent',
       fg: active === id ? '#F7F3EC' : '#1E1A15',
+      hoverBg: active === id ? '#1E1A15' : 'rgba(30,26,21,.06)',
       go: (e) => { e.preventDefault(); this.pickCat(id); },
       sheetGo: (e) => { e.preventDefault(); this.setState({ sheet: false }); this.pickCat(id); },
       legend: id === 'cafeteria' ? LEGEND : '',
@@ -707,7 +711,7 @@ class Component extends DCLogic {
       heroLines: ({ ES: ['Panadería','artesanal','francesa','en el corazón','*del *desierto','*de *Atacama'], EN: ['French','artisan','bakery','in the heart','*of *the *Atacama','*Desert'], PT: ['Padaria','artesanal','francesa','no coração','*do *deserto','*do *Atacama'], FR: ['Boulangerie','artisanale','française','au cœur','*du *désert','*d’Atacama'] })[this.state.lang || (window.frGetLang && window.frGetLang()) || 'ES'].map(l => l.split(' ').map(t => ({ t: t.replace('*',''), it: t[0] === '*', rom: t[0] !== '*' }))),
       menu,
       carRef: this.carRef,
-      slides: SLIDES.map(([src, alt]) => ({ bg: 'url(' + src + ')', alt })),
+      slides: SLIDES.map(([src, alt, pos]) => ({ bg: 'url(' + src + ')', alt, pos: pos || 'center' })),
       slideDots: SLIDES.map((_, i) => ({ label: 'Ir a la foto ' + (i + 1), w: i === (this.state.slide || 0) ? '28px' : '8px', bg: i === (this.state.slide || 0) ? '#1E1A15' : 'rgba(30,26,21,.2)', go: () => this.carGo(i) })),
       carPrev: () => this.carGo((this.state.slide || 0) - 1),
       carNext: () => this.carGo((this.state.slide || 0) + 1),

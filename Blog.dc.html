@@ -66,7 +66,7 @@ html.lenis,html.lenis body{height:auto}
       <a href="index.html#marca" style-hover="color:#6E5B3E">La marca</a>
       <a href="index.html#ubicacion" style-hover="color:#6E5B3E">Ubicación</a>
       <a href="index.html#contacto" style-hover="color:#6E5B3E">Contacto</a>
-      <a href="blog.html" style-hover="color:#6E5B3E">Blog</a>
+      <a href="Blog.dc.html" style-hover="color:#6E5B3E">Blog</a>
     </nav>
     
     <div data-fr-lang="" style="position:relative">
@@ -99,7 +99,7 @@ html.lenis,html.lenis body{height:auto}
         <a href="index.html#marca" onClick="{{ menuGo }}" style="transition:opacity .5s ease 175ms,transform .6s cubic-bezier(.2,.7,.2,1) 175ms;opacity:{{ menuItemOp }};transform:{{ menuItemX }};display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(30,26,21,.1);color:#1E1A15"><span style="font-size:13px;color:rgba(30,26,21,.45);width:22px">02</span><span style="font-size:clamp(34px,9vw,48px);font-weight:500;letter-spacing:-.03em;line-height:1">La marca</span></a>
         <a href="index.html#ubicacion" onClick="{{ menuGo }}" style="transition:opacity .5s ease 230ms,transform .6s cubic-bezier(.2,.7,.2,1) 230ms;opacity:{{ menuItemOp }};transform:{{ menuItemX }};display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(30,26,21,.1);color:#1E1A15"><span style="font-size:13px;color:rgba(30,26,21,.45);width:22px">03</span><span style="font-size:clamp(34px,9vw,48px);font-weight:500;letter-spacing:-.03em;line-height:1">Ubicación</span></a>
         <a href="index.html#contacto" onClick="{{ menuGo }}" style="transition:opacity .5s ease 285ms,transform .6s cubic-bezier(.2,.7,.2,1) 285ms;opacity:{{ menuItemOp }};transform:{{ menuItemX }};display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(30,26,21,.1);color:#1E1A15"><span style="font-size:13px;color:rgba(30,26,21,.45);width:22px">04</span><span style="font-size:clamp(34px,9vw,48px);font-weight:500;letter-spacing:-.03em;line-height:1">Contacto</span></a>
-        <a href="blog.html" onClick="{{ menuGo }}" style="transition:opacity .5s ease 340ms,transform .6s cubic-bezier(.2,.7,.2,1) 340ms;opacity:{{ menuItemOp }};transform:{{ menuItemX }};display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(30,26,21,.1);color:#1E1A15"><span style="font-size:13px;color:rgba(30,26,21,.45);width:22px">05</span><span style="font-size:clamp(34px,9vw,48px);font-weight:500;letter-spacing:-.03em;line-height:1">Blog</span></a>
+        <a href="Blog.dc.html" onClick="{{ menuGo }}" style="transition:opacity .5s ease 340ms,transform .6s cubic-bezier(.2,.7,.2,1) 340ms;opacity:{{ menuItemOp }};transform:{{ menuItemX }};display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(30,26,21,.1);color:#1E1A15"><span style="font-size:13px;color:rgba(30,26,21,.45);width:22px">05</span><span style="font-size:clamp(34px,9vw,48px);font-weight:500;letter-spacing:-.03em;line-height:1">Blog</span></a>
       </nav>
       <div style="display:flex;flex-direction:column;gap:12px">
         <p style="margin:0;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(30,26,21,.55)">Idioma</p>
@@ -189,7 +189,7 @@ html.lenis,html.lenis body{height:auto}
           <a href="index.html#carta" style="color:rgba(238,231,218,.85)" style-hover="color:#C9B38D">Carta</a>
           <a href="index.html#marca" style="color:rgba(238,231,218,.85)" style-hover="color:#C9B38D">La marca</a>
           <a href="index.html#ubicacion" style="color:rgba(238,231,218,.85)" style-hover="color:#C9B38D">Ubicación</a>
-          <a href="blog.html" style="color:rgba(238,231,218,.85)" style-hover="color:#C9B38D">Blog</a>
+          <a href="Blog.dc.html" style="color:rgba(238,231,218,.85)" style-hover="color:#C9B38D">Blog</a>
         </div>
       </div>
       <div>
@@ -216,7 +216,7 @@ const POSTS = [
   ['Pastelería francesa: qué pedir la primera vez', 'Obrador', 'assets/blog-3.png'],
   ['Pan sin gluten: qué días hay', 'Obrador', 'assets/local.jpg'],
   ['Temporada alta: cómo cambia el pueblo', 'San Pedro', 'assets/terraza-tarde.jpg']
-].map(([title, cat, img, ex]) => ({ title, cat, img, bgImg: img ? 'url(' + img + ')' : "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><path d='M0 0L100 100M100 0L0 100' stroke='%231E1A15' stroke-opacity='.18' stroke-width='.4' vector-effect='non-scaling-stroke' fill='none'/></svg>\"), linear-gradient(#E6DDCC,#E6DDCC)", ex: ex || 'Una o dos líneas con la respuesta concreta que busca quien llega desde Google.', href: 'articulo.html' }));
+].map(([title, cat, img, ex]) => ({ title, cat, img, bgImg: img ? 'url(' + img + ')' : "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><path d='M0 0L100 100M100 0L0 100' stroke='%231E1A15' stroke-opacity='.18' stroke-width='.4' vector-effect='non-scaling-stroke' fill='none'/></svg>\"), linear-gradient(#E6DDCC,#E6DDCC)", ex: ex || 'Una o dos líneas con la respuesta concreta que busca quien llega desde Google.', href: 'Blog%20Articulo.dc.html' }));
 class Component extends DCLogic {
   state = { now: Date.now(), cat: 'Todas', shown: 4 };
   componentDidMount() {
