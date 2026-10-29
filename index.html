@@ -217,7 +217,7 @@ html.lenis,html.lenis body{height:auto}
       <div style="display:flex;flex-wrap:wrap;gap:32px 64px;align-items:flex-end;margin-bottom:56px">
         <div style="flex:1 1 560px;min-width:0">
           <p style="display:flex;align-items:center;gap:10px;margin:0 0 20px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase"><span style="width:7px;height:7px;border-radius:50%;background:#A18B69"></span>11 categorías · 87 productos · actualizada 00/00/0000</p>
-          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:clamp(16px,2vw,28px)"><h2 id="carta-title" style="margin:0;flex:none;font-weight:500;font-size:clamp(40px,min(5.2vw,9vh),76px);line-height:1;letter-spacing:-.03em">Carta y <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:1.16em;line-height:.9">precios</span></h2><img src="assets/sticker-pan.png?v=2" alt="" aria-hidden="true" style="width:clamp(76px,7vw,104px);height:auto;margin-top:clamp(8px,1vw,16px);transform:rotate(6deg);filter:drop-shadow(0 8px 14px rgba(30,26,21,.22));pointer-events:none"></div>
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:clamp(16px,2vw,28px)"><h2 id="carta-title" style="margin:0;flex:none;font-weight:500;font-size:clamp(40px,min(5.2vw,9vh),76px);line-height:1;letter-spacing:-.03em">Carta y precios</h2><img src="assets/sticker-pan.png?v=2" alt="" aria-hidden="true" style="width:clamp(76px,7vw,104px);height:auto;margin-top:clamp(8px,1vw,16px);transform:rotate(6deg);filter:drop-shadow(0 8px 14px rgba(30,26,21,.22));pointer-events:none"></div>
         </div>
         <p style="flex:1 1 360px;max-width:520px;margin:0;font-size:17px;line-height:1.6;color:rgba(30,26,21,.68);text-wrap:pretty">Todos los productos están hechos cada noche por nuestras manos y con mucho amor, por lo cual las cantidades son limitadas. ¡Bon appétit!</p>
       </div>
@@ -347,7 +347,12 @@ html.lenis,html.lenis body{height:auto}
     </section>
 
     <!-- 06 · contacto -->
-    <section id="contacto" data-screen-label="06 Contacto" style="position:relative;margin-top:72px;padding:clamp(28px,4vw,56px);border-radius:clamp(28px,3.5vw,48px);background:#F7F3EC;border:1px solid rgba(30,26,21,.1);scroll-margin-top:100px">
+    <section id="contacto" data-screen-label="06 Contacto y Trabaja con nosotros" style="position:relative;margin-top:72px;padding:clamp(28px,4vw,56px);border-radius:clamp(28px,3.5vw,48px);background:#F7F3EC;border:1px solid rgba(30,26,21,.1);scroll-margin-top:100px">
+      <div role="tablist" style="display:inline-flex;gap:4px;padding:4px;margin:0 0 clamp(32px,4vw,48px);border-radius:999px;background:#EEE7DA;border:1px solid rgba(30,26,21,.08)">
+        <button type="button" onClick="{{ showContacto }}" aria-pressed="{{ isContacto }}" style="padding:12px 24px;border:0;border-radius:999px;font-weight:600;font-size:16px;cursor:pointer;font-family:inherit;transition:background .25s,color .25s;background:{{ isContactoBg }};color:{{ isContactoFg }}">Contacto</button>
+        <button type="button" onClick="{{ showTrabaja }}" aria-pressed="{{ isTrabaja }}" style="padding:12px 24px;border:0;border-radius:999px;font-weight:600;font-size:16px;cursor:pointer;font-family:inherit;transition:background .25s,color .25s;background:{{ isTrabajaBg }};color:{{ isTrabajaFg }}">Trabaja con nosotros</button>
+      </div>
+      <sc-if value="{{ isContacto }}" hint-placeholder-val="{{ true }}">
       <div style="display:flex;flex-wrap:wrap;gap:48px 72px">
         <div style="flex:1 1 400px;min-width:0;display:flex;flex-direction:column;justify-content:space-between;gap:28px">
           <div>
@@ -377,6 +382,43 @@ html.lenis,html.lenis body{height:auto}
           </div>
         </form>
       </div>
+      </sc-if>
+      <sc-if value="{{ isTrabaja }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-wrap:wrap;gap:48px 72px">
+        <div style="flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:20px">
+          <p style="display:flex;align-items:center;gap:10px;margin:0 0 4px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase"><span style="width:7px;height:7px;border-radius:50%;background:#A18B69"></span>Equipo</p>
+          <h2 style="margin:0 0 8px;font-weight:500;font-size:clamp(36px,min(4.4vw,8vh),64px);line-height:1.02;letter-spacing:-.03em">Trabaja con nosotros</h2>
+          <p style="margin:0;font-size:clamp(20px,1.8vw,24px);line-height:1.4;letter-spacing:-.01em;color:#1E1A15;max-width:520px;text-wrap:pretty">En La Franchutería creemos que detrás de cada pan, cada café y cada sonrisa, hay personas que hacen la diferencia.</p>
+          <p style="margin:0;font-size:18px;line-height:1.6;color:rgba(30,26,21,.72);max-width:520px;text-wrap:pretty">¿Te gustaría ser parte de nuestra historia? Si disfrutas trabajar en equipo, te apasiona el servicio, la gastronomía o simplemente tienes ganas de aprender y crecer, queremos conocerte.</p>
+          <p style="margin:4px 0 0;font-size:14px;line-height:1.5;color:rgba(30,26,21,.55);max-width:520px;text-wrap:pretty">Quizás todavía no tenemos una vacante para ti, pero nos encantará saber quién eres y qué podrías aportar a nuestro equipo.</p>
+        </div>
+        <form onSubmit="{{ onJobSubmit }}" style="flex:1 1 440px;min-width:0;align-self:flex-start;display:flex;flex-direction:column;gap:26px;padding:clamp(24px,3vw,36px);border-radius:32px;background:#EEE7DA;border:1px solid rgba(30,26,21,.08)">
+          <label style="display:block"><span style="display:block;margin:0 0 8px 16px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(30,26,21,.55)">Nombre completo</span><input type="text" placeholder="Nombre y apellido" autocomplete="name" required="" style="width:100%;padding:14px 16px 14px;border:0;border-bottom:1px solid rgba(30,26,21,.22);background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.15) 100%);font-size:clamp(20px,1.8vw,24px);letter-spacing:-.01em;color:#1E1A15;outline:none;border-radius:14px 14px 0 0;transition:border-color .25s,background .25s;font-family:inherit;box-sizing:border-box" style-focus="border-bottom-color:#1E1A15;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.28) 100%)"></label>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px 32px">
+            <label style="display:block"><span style="display:block;margin:0 0 8px 16px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(30,26,21,.55)">Correo de contacto</span><input type="email" placeholder="hola@correo.cl" autocomplete="email" required="" style="width:100%;padding:14px 16px 14px;border:0;border-bottom:1px solid rgba(30,26,21,.22);background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.15) 100%);font-size:clamp(20px,1.8vw,24px);letter-spacing:-.01em;color:#1E1A15;outline:none;border-radius:14px 14px 0 0;transition:border-color .25s,background .25s;font-family:inherit;box-sizing:border-box" style-focus="border-bottom-color:#1E1A15;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.28) 100%)"></label>
+            <label style="display:block"><span style="display:block;margin:0 0 8px 16px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(30,26,21,.55)">Teléfono</span><input type="tel" placeholder="+56 9 1234 5678" autocomplete="tel" required="" style="width:100%;padding:14px 16px 14px;border:0;border-bottom:1px solid rgba(30,26,21,.22);background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.15) 100%);font-size:clamp(20px,1.8vw,24px);letter-spacing:-.01em;color:#1E1A15;outline:none;border-radius:14px 14px 0 0;transition:border-color .25s,background .25s;font-family:inherit;box-sizing:border-box" style-focus="border-bottom-color:#1E1A15;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.28) 100%)"></label>
+          </div>
+          <div>
+            <span style="display:block;margin:0 0 8px 16px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(30,26,21,.55)">Currículum</span>
+            <label style="display:flex;align-items:center;gap:16px;padding:16px;border-radius:20px;border:1px dashed rgba(30,26,21,.3);cursor:pointer;transition:background .25s,border-color .25s" style-hover="background:rgba(255,255,255,.35);border-color:#1E1A15">
+              <input type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required="" onChange="{{ onCvChange }}" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none">
+              <span style="flex:none;width:44px;height:44px;border-radius:50%;background:#1E1A15;color:#F7F3EC;display:grid;place-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m17 8-5-5-5 5"></path><path d="M12 3v12"></path></svg></span>
+              <span style="min-width:0;display:flex;flex-direction:column;gap:2px">
+                <span style="font-size:17px;font-weight:600;color:#1E1A15;overflow-wrap:anywhere">{{ cvLabel }}</span>
+                <span style="font-size:14px;color:rgba(30,26,21,.55)">PDF o Word</span>
+              </span>
+            </label>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px">
+            <p style="margin:0;font-size:14px;line-height:1.5;color:rgba(30,26,21,.55);max-width:280px">{{ jobNote }}</p>
+            <button type="submit" style="display:inline-flex;align-items:center;gap:14px;padding:10px 10px 10px 28px;border:0;border-radius:999px;background:#1E1A15;color:#F7F3EC;font-weight:600;font-size:16px;cursor:pointer" style-hover="background:#6E5B3E">
+              <span>Postular</span>
+              <span style="width:40px;height:40px;border-radius:50%;background:#A18B69;color:#1E1A15;display:grid;place-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+            </button>
+          </div>
+        </form>
+      </div>
+      </sc-if>
     </section>
 
     <!-- 07 · blog -->
@@ -469,7 +511,7 @@ const PHOTOS = {
   empanadas: { 'Empanada de queso':'empanada-queso','Empanada de pino':'empanada-pino' },
   quiches: { 'Tocino «Lorraine»':'quiche-tocino','Cebolla':'quiche-cebolla','Salmón & espinacas':'quiche-salmon','Tomate & mostaza Dijon':'quiche-tomate','Champiñón':'quiche-champinon','4 quesos':'quiche-4-quesos','Mechada & queso':'quiche-mechada' },
   bebidas: { 'Jugo natural':'jugo-natural','Agua purificada':'agua-purificada','Granizado':'granizado-maracuya' },
-  agregados: { 'Mantequilla de campo':'agregado-mantequilla','Palta':'agregado-palta','Queso mantecoso':'agregado-mantecoso','Queso cabra':'agregado-cabra','Mermelada':'agregado-mermelada','Paté de campo artesanal':'agregado-pate' },
+  agregados: { 'Mantequilla de campo':'agregado-mantequilla','Palta':'agregado-pate','Queso mantecoso':'agregado-mantecoso','Queso cabra':'agregado-cabra','Mermelada':'agregado-mermelada','Paté de campo artesanal':'agregado-palta' },
   mocktails: { 'Mule ahumado':'mocktail-mule-ahumado','Mule especiado':'mocktail-mule-especiado','Tropical Ginger':'mocktail-tropical-ginger','Naranja Coffee Tonic':'mocktail-coffee-tonic','Mango michelado':'mocktail-mango-michelado','Not Mojito':'mocktail-mojito','Not Bloody Mary':'mocktail-bloody-mary','Cerveza Kunstmann sin alcohol 330cc':'cerveza-kunstmann','Cerveza Royal sin alcohol 335cc':'cerveza-royal','Base michelada':'base-michelada' },
   novedades: { 'Trozo torta Opera':'novedad-opera','Brioche pastelera':'novedad-brioche-pastelera','Brioche manjar':'novedad-brioches','Brioche avellana chocolate':'novedad-brioches' },
   pizzas: { 'La Serrano Royal':'pizza-serrano','La Margarita':'pizza-margarita','La Potager':'pizza-potager','La Belle Pera':'pizza-pera','La Causeo Nortino':'pizza-causeo','La Toscana':'pizza-toscana','La Pepperoni':'pizza-pepperoni' },
@@ -479,7 +521,7 @@ const photoFor = (cat, n) => { const p = PHOTOS[cat] && PHOTOS[cat][n]; return p
 const MENU = [
   ['baguettes','Baguettes',[['Natural','$3.000','Elaborada con masa madre y fermentación natural'],['Aceitunas','$4.200','Con aceite de oliva, aceitunas moradas y sevillanas'],['Queso de cabra & orégano','$4.400','Queso de cabra artesanal, orégano y aceite de oliva'],['Queso mantecoso','$4.000','Con abundante queso mantecoso horneado'],['Higos y Roquefort','$4.500','Combinación de higos dulces e intenso queso Roquefort'],['Ajo','$4.000','Pasta de ajos asados al horno y aceite de oliva · Sólo fines de semana']]],
   ['agregados','Agregados',[['Mantequilla de campo','$2.200'],['Palta','$4.200'],['Queso mantecoso','$3.500'],['Queso cabra','$3.500'],['Mermelada','$2.500'],['Paté de campo artesanal','$3.500']]],
-  ['croissants','Croissants',[['Natural','$3.000','Dulce · Sin relleno, receta clásica hojaldrada'],['Pain au chocolat','$3.400','Dulce · Relleno con bastones de chocolate 48% cacao'],['Manjar','$3.400','Dulce · Relleno de cremoso manjar tradicional'],['Frambuesa y chocolate blanco','$3.800','Dulce · Mermelada de frambuesa y chocolate blanco'],['Torsado','$3.500','Dulce · Pintado con crema pastelera y chocolate bitter'],['Rollito de canela','$2.800','Dulce · Frosting de queso crema y vainilla'],['Jamón & queso','$4.000','Salado · Relleno de jamón de pierna y queso mantecoso'],['Jamón serrano & parmesano','$4.000','Salado · Relleno de jamón serrano y queso parmesano'],['Salmón, queso crema & alcaparras','$4.500','Salado · Relleno de salmón ahumado, queso crema y alcaparras']]],
+  ['croissants','Croissants',[['Natural','$3.000','Dulce · Sin relleno, receta clásica hojaldrada'],['Pain au chocolat','$3.400','Dulce · Relleno con 2 bastones de chocolate 48% cacao'],['Manjar','$3.400','Dulce · Relleno de cremoso manjar tradicional'],['Frambuesa y chocolate blanco','$3.800','Dulce · Mermelada de frambuesa y chocolate blanco'],['Torsado','$3.500','Dulce · Pintado con crema pastelera y chocolate bitter'],['Rollito de canela','$2.800','Dulce · Frosting de queso crema y vainilla'],['Jamón & queso','$4.000','Salado · Relleno de jamón y queso mantecoso'],['Jamón serrano & parmesano','$4.000','Salado · Relleno de jamón serrano y queso parmesano'],['Salmón, queso crema & alcaparras','$4.500','Salado · Relleno de salmón ahumado, queso crema y alcaparras']]],
   ['empanadas','Empanadas',[['Empanada de queso','$4.000','Rellena de queso mantecoso fundido · Disponible todos los días'],['Empanada de pino','$4.000','Pino de carne picada, cebolla, pasas, huevo duro y aceitunas moradas · Disponible solo fines de semana y festivos']]],
   ['quiches','Quiches',[['Tocino «Lorraine»','$6.000','Relleno con tocino asado crocante'],['Cebolla','$6.000','Cebolla caramelizada y toques de tomillo'],['Salmón & espinacas','$6.500','Salmón ahumado y espinaca salteada'],['Tomate & mostaza Dijon','$6.000','Tomates asados, aceite de oliva, tomillo y base de mostaza Dijon'],['Champiñón','$6.000','Champiñones salteados con perejil fresco'],['4 quesos','$6.000','Mezcla de queso mantecoso, crema, parmesano y Roquefort'],['Mechada & queso','$6.000','Carne mechada de res y queso mantecoso']]],
   ['eclairs','Éclairs',[['Avellanas','$6.500','Rellena de buttercream de praliné de avellana europea'],['Café','$5.500','Rellena de pastelera de café intenso, decorada con fondant y feuilletine'],['Frambuesa','$5.500','Rellena de pastelera de frambuesa y chocolate blanco, decorada con fondant y frambuesa liofilizada'],['Tiramisú','$6.500','Rellena de pastelera de café, crema de tiramisú y esencia de amaretto con cacao amargo'],['Maracuyá','$6.500','Rellena de pastelera de maracuyá y chocolate blanco, merengue suizo y coulis'],['Limón rica-rica','$6.500','Rellena de pastelera de limón de pica con rica rica, merengue suizo y zeste'],['Chocolate','$5.500','Rellena con pastelera de chocolate bitter 75% cacao, fondant y crué de cacao'],['Pistachos','$6.000','Rellena de pastelera con pasta de pistacho, fondant y pistachos tostados']]],
@@ -737,7 +779,19 @@ class Component extends DCLogic {
       status: this.status(),
       posts: POSTS.map(([title, slot], i) => ({ title, slot, bgImg: 'url(assets/blog-' + (i + 1) + '.png)', meta: 'Horarios y temporada' })),
       onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
-      formNote: this.state.sent ? 'Mensaje enviado. Te respondemos pronto.' : 'Respondemos en uno o dos días hábiles.'
+      isContacto: (this.state.tab || 'contacto') === 'contacto',
+      isTrabaja: this.state.tab === 'trabaja',
+      isContactoBg: this.state.tab === 'trabaja' ? 'transparent' : '#1E1A15',
+      isContactoFg: this.state.tab === 'trabaja' ? '#1E1A15' : '#F7F3EC',
+      isTrabajaBg: this.state.tab === 'trabaja' ? '#1E1A15' : 'transparent',
+      isTrabajaFg: this.state.tab === 'trabaja' ? '#F7F3EC' : '#1E1A15',
+      showContacto: () => this.setState({ tab: 'contacto' }),
+      showTrabaja: () => this.setState({ tab: 'trabaja' }),
+      formNote: this.state.sent ? 'Mensaje enviado. Te respondemos pronto.' : 'Respondemos en uno o dos días hábiles.',
+      cvLabel: this.state.cvName || 'Adjuntar CV',
+      onCvChange: (e) => { const f = e.target.files && e.target.files[0]; this.setState({ cvName: f ? f.name : '' }); },
+      onJobSubmit: (e) => { e.preventDefault(); this.setState({ jobSent: true }); },
+      jobNote: this.state.jobSent ? 'Postulación enviada. Gracias por escribirnos.' : 'Guardamos tu CV para futuras vacantes.'
     };
   }
 }
